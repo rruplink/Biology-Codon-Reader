@@ -1,10 +1,18 @@
-Console.WriteLine("Please enter the first letter of your codon: ");
+            //Original Creator: rruplink on GitHub
+            //Please leave credit statement, thank you.
+            Console.WriteLine("Please enter the first letter of your codon: ");
             char BP1 = Convert.ToChar(Console.ReadLine());
+            //inputs the first character of the codon
             Console.WriteLine("Please enter the second letter of your codon: ");
             char BP2 = Convert.ToChar(Console.ReadLine());
+            //inputs the second character of the codon
             Console.WriteLine("Please enter the third letter of your codon: ");
             char BP3 = Convert.ToChar(Console.ReadLine());
-            String result = "No result inputted yet.";
+            //inputs the third character of the codon
+            
+            /*The following uses a three-switch system to determine the amino acid created by the codon, it's very complicated,
+            and there are probbaly better ways to do it, but this is the only real way I know how. */
+            
             switch (BP1)
             {
                 case 'G':
@@ -153,7 +161,8 @@ Console.WriteLine("Please enter the first letter of your codon: ");
                                     result = "The amino acid created by this codon is Asparagine.";
                                     break;
                                 case 'U':
-                                    result = "The amino acid created by this codon is Asparagine.";
+
+//result = "The amino acid created by this codon is Asparagine.";
                                     break;
                             }
                             break;
@@ -199,10 +208,14 @@ Console.WriteLine("Please enter the first letter of your codon: ");
                             break;
                     }
                     break;
+                    //sets the default result to Invalid Response
                 default:
                     result = "Invalid response.";
                     break;
             }
+            
+            //Tells the user what the codon is and closes when they click any key.
             Console.WriteLine(result);
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
+            
