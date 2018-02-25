@@ -1,0 +1,208 @@
+Console.WriteLine("Please enter the first letter of your codon: ");
+            char BP1 = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Please enter the second letter of your codon: ");
+            char BP2 = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Please enter the third letter of your codon: ");
+            char BP3 = Convert.ToChar(Console.ReadLine());
+            String result = "No result inputted yet.";
+            switch (BP1)
+            {
+                case 'G':
+                    switch (BP2)
+                    {
+                        case 'G':
+                            result = "The amino acid created by this codon is Glycine";
+                            break;
+                        case 'U':
+                            result = "The amino acid created by this codon is Valine";
+                            break;
+                        case 'A':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Glumatic Acid.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid created by this codon is Glutamic Acid.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Aspartic Acid.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Aspartic Acid.";
+                                    break;
+                            }
+                            break;
+                        case 'C':
+                            result = "The amino acid created by this codon is Alanine";
+                            break;
+                        default:
+                            result = "Invalid response.";
+                            break;
+                    }
+                    break;
+                case 'U':
+                    switch (BP2)
+                    {
+                        case 'G':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Tryptohan.";
+                                    break;
+                                case 'A':
+                                    result = "This Codone halts the production of this protein.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Cysteine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Cysteine.";
+                                    break;
+                            }
+                            break;
+                        case 'U':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Leucine.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid created by this codon is Leucine.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Phenylalanine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Phenylalanine.";
+                                    break;
+                            }
+                            break;
+                        case 'A':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "This Codone halts the production of this protein.";
+                                    break;
+                                case 'A':
+                                    result = "This Codone halts the production of this protein.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Tyrosine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Tyrosine.";
+                                    break;
+                            }
+                            break;
+                        case 'C':
+                            result = "The Amino Acid aded by this Codon is Serine";
+                            break;
+                        default:
+                            result = "Invalid response.";
+                            break;
+                    }
+                    break;
+                case 'A':
+                    switch (BP2)
+                    {
+                        case 'G':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Arginine.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid created by this codon is Arginine.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Serine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Serine.";
+                                    break;
+                            }
+                            break;
+                        case 'U':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Methionine.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid created by this codon is Isoleucine.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Isoleucine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Isoleucine.";
+                                    break;
+                            }
+                            break;
+                        case 'A':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid created by this codon is Lysine.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid created by this codon is Lysine.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Asparagine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Asparagine.";
+                                    break;
+                            }
+                            break;
+                        case 'C':
+                            result = "The Amino Acid added by this Codon is Threonine.";
+                            break;
+                        default:
+                            result = "Invalid response.";
+                            break;
+                    }
+                    break;
+                case 'C':
+                    switch (BP2)
+                    {
+                        case 'G':
+                            result = "The Amino Acid added by this codon is Arginine.";
+                            break;
+                        case 'U':
+                            result = "The amino acid created by this codon is Leucine";
+                            break;
+                        case 'A':
+                            switch (BP3)
+                            {
+                                case 'G':
+                                    result = "The amino acid added by this codon is Glutamine.";
+                                    break;
+                                case 'A':
+                                    result = "The amino acid added by this codon is Glutamine.";
+                                    break;
+                                case 'C':
+                                    result = "The amino acid created by this codon is Histidine.";
+                                    break;
+                                case 'U':
+                                    result = "The amino acid created by this codon is Histidine.";
+                                    break;
+                            }
+                            break;
+                        case 'C':
+                            result = "the amino acid added by this codon is Proline.";
+                            break;
+                        default:
+                            result = "Invalid response.";
+                            break;
+                    }
+                    break;
+                default:
+                    result = "Invalid response.";
+                    break;
+            }
+            Console.WriteLine(result);
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
