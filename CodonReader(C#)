@@ -1,14 +1,16 @@
-            //Original Creator: rruplink on GitHub
-            //Please leave credit statement, thank you.
+//Original Creator: rruplink on GitHub
+            //Please leave credit statement if used, thank you.
             Console.WriteLine("Please enter the first letter of your codon: ");
-            char BP1 = Convert.ToChar(Console.ReadLine());
+            char BP1 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
             //inputs the first character of the codon
             Console.WriteLine("Please enter the second letter of your codon: ");
-            char BP2 = Convert.ToChar(Console.ReadLine());
+            char BP2 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
             //inputs the second character of the codon
             Console.WriteLine("Please enter the third letter of your codon: ");
-            char BP3 = Convert.ToChar(Console.ReadLine());
+            char BP3 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
             //inputs the third character of the codon
+            
+            String result = "Invalid Entry"
             
             /*The following uses a three-switch system to determine the amino acid created by the codon, it's very complicated,
             and there are probbaly better ways to do it, but this is the only real way I know how. */
