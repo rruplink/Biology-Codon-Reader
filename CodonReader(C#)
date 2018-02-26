@@ -128,7 +128,7 @@
                                     result = "The amino acid created by this codon is Arginine.";
                                     break;
                                 case 'C':
-                                    result = "The amino acid created by this codon is Serine.";
+                                    result = "The amino acid created by this codon is Serine."; 
                                     break;
                                 case 'U':
                                     result = "The amino acid created by this codon is Serine.";
@@ -138,7 +138,7 @@
                         case 'U':
                             switch (BP3)
                             {
-                                case 'G':
+                               case 'G':
                                     result = "The amino acid created by this codon is Methionine.";
                                     break;
                                 case 'A':
@@ -166,7 +166,7 @@
                                     break;
                                 case 'U':
 
-//result = "The amino acid created by this codon is Asparagine.";
+                                    result = "The amino acid created by this codon is Asparagine.";
                                     break;
                             }
                             break;
