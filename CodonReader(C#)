@@ -71,6 +71,8 @@
                                     break;
                             }
                             break;
+                            //These work by running several case statements. Messing with the case statements
+                            //can lead to the program not working and crashing your computer.
                         case 'U':
                             switch (BP3)
                             {
