@@ -1,545 +1,1060 @@
- //Original Creator: rruplink on GitHub
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Codon_Reader_Application
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Original Creator: rruplink on GitHub
+
+
 
             //Please leave credit statement, thank you.
 
+
+
             Console.WriteLine("Please enter the first letter of your codon: ");
+
+
 
             char BP1 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
 
+
+
             //inputs the first character of the codon
+
+
 
             Console.WriteLine("Please enter the second letter of your codon: ");
 
+
+
             char BP2 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+
+
 
             //inputs the second character of the codon
 
+
+
             Console.WriteLine("Please enter the third letter of your codon: ");
+
+
 
             char BP3 = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
 
+
+
             //inputs the third character of the codon
+
+
 
             string result = "Invalid Entry";
 
+
+
             Console.Clear();
+
             Console.WriteLine("alanine");
+
             Console.WriteLine("arginine");
+
             Console.WriteLine("asparagine");
+
             Console.WriteLine("aspartic acid");
+
             Console.WriteLine("cysteine");
+
             Console.WriteLine("glutamine ");
+
             Console.WriteLine("glutamic acid");
+
             Console.WriteLine("glycine");
+
             Console.WriteLine("histidine");
+
             Console.WriteLine("isoleucine");
+
             Console.WriteLine("leucine");
+
             Console.WriteLine("lysine");
+
             Console.WriteLine("methionine");
+
             Console.WriteLine("phenylalanine");
+
             Console.WriteLine("proline");
+
             Console.WriteLine("serine");
+
             Console.WriteLine("threonine");
+
             Console.WriteLine("tryptophan");
+
             Console.WriteLine("tyrosine");
+
             Console.WriteLine("valine");
+
             Console.Clear();
+
             Console.WriteLine("The options base off of the codons first letter are: ");
 
+
+
             /*The following uses a three-switch system to determine the amino acid created by the codon, it's very complicated,
+
+
 
             and there are probbaly better ways to do it, but this is the only real way I know how. */
 
 
 
+
+
+
+
             switch (BP1)
+
+
 
             {
 
+
+
                 case 'G':
+
                     Console.WriteLine("glutamic acid");
+
                     Console.WriteLine("glycine");
+
                     Console.WriteLine("alanine");
+
                     Console.WriteLine("aspartic acid");
+
                     Console.WriteLine("valine");
+
                     Console.WriteLine("Press Enter to Continue");
+
                     Console.ReadLine();
+
                     switch (BP2)
+
+
 
                     {
 
+
+
                         case 'G':
+
                             Console.Clear();
+
                             result = "The amino acid created by this codon is Glycine";
 
+
+
                             break;
 
+
+
                         case 'U':
+
                             Console.Clear();
+
                             result = "The amino acid created by this codon is Valine";
 
+
+
                             break;
 
+
+
                         case 'A':
+
                             Console.Clear();
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("glutamic acid");
+
                             Console.WriteLine("aspartic acid");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Glumatic Acid.";
 
+
+
                                     break;
 
+
+
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Glutamic Acid.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Aspartic Acid.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Aspartic Acid.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
 
+
+
                         case 'C':
+
                             Console.Clear();
+
                             result = "The amino acid created by this codon is Alanine";
 
+
+
                             break;
+
+
 
                         default:
 
+
+
                             result = "Invalid response.";
+
+
 
                             break;
 
+
+
                     }
 
+
+
                     break;
+
+
 
                 case 'U':
+
                     Console.WriteLine("phenylalanine");
+
                     Console.WriteLine("leucine");
+
                     Console.WriteLine("serine");
+
                     Console.WriteLine("tyrosine");
+
                     Console.WriteLine("stop");
+
                     Console.WriteLine("cysteine");
+
                     Console.WriteLine("tryptophan");
+
                     Console.WriteLine("Press Enter to Continue");
+
                     Console.ReadLine();
+
                     Console.Clear();
 
+
+
                     switch (BP2)
+
                     {
 
+
+
                         case 'G':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Tryptophan");
+
                             Console.WriteLine("Stop");
+
                             Console.WriteLine("Cysteine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Tryptohan.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "This Codone halts the production of this protein.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Cysteine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Cysteine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
+
+
 
                         case 'U':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Phynlalanine");
+
                             Console.WriteLine("Leucine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Leucine.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Leucine.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Phenylalanine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Phenylalanine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
+
+
 
                         case 'A':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Stop");
+
                             Console.WriteLine("Tyrosine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "This Codone halts the production of this protein.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "This Codone halts the production of this protein.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Tyrosine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Tyrosine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
 
+
+
                         case 'C':
+
                             Console.Clear();
+
                             result = "The Amino Acid aded by this Codon is Serine";
 
+
+
                             break;
+
+
 
                         default:
+
                             Console.Clear();
+
                             result = "Invalid response.";
 
+
+
                             break;
+
+
 
                     }
 
+
+
                     break;
+
+
 
                 case 'A':
+
                     Console.WriteLine("Arginine");
+
                     Console.WriteLine("Serine");
+
                     Console.WriteLine("Lysine");
+
                     Console.WriteLine("Asparagine");
+
                     Console.WriteLine("Threonine");
+
                     Console.WriteLine("Methionine");
+
                     Console.WriteLine("Isoleucine");
+
                     Console.WriteLine("Press Enter to Continue");
+
                     Console.ReadLine();
+
                     Console.Clear();
+
                     switch (BP2)
+
                     {
 
+
+
                         case 'G':
+
                             Console.Clear();
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Arginine");
+
                             Console.WriteLine("Serine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Arginine.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Arginine.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Serine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Serine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
 
+
+
                         case 'U':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Methionine");
+
                             Console.WriteLine("Isoleucine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Methionine.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Isoleucine.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Isoleucine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Isoleucine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
 
+
+
                         case 'A':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Lysine");
+
                             Console.WriteLine("Asparagine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Lysine.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Lysine.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Asparagine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Asparagine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
+
+
 
                         case 'C':
+
                             Console.Clear();
+
                             result = "The Amino Acid added by this Codon is Threonine.";
 
+
+
                             break;
+
+
 
                         default:
 
+
+
                             result = "Invalid response.";
+
+
 
                             break;
 
+
+
                     }
+
+
 
                     break;
 
+
+
                 case 'C':
+
                     Console.WriteLine("Glutamine");
+
                     Console.WriteLine("Histidine");
+
                     Console.WriteLine("Arginine");
+
                     Console.WriteLine("Proline");
+
                     Console.WriteLine("Leucine");
+
                     Console.WriteLine("Press Enter to Continue");
+
                     Console.ReadLine();
+
                     Console.Clear();
+
                     switch (BP2)
+
+
 
                     {
 
+
+
                         case 'G':
+
                             Console.Clear();
+
                             result = "The Amino Acid added by this codon is Arginine.";
 
+
+
                             break;
+
+
 
                         case 'U':
+
                             Console.Clear();
+
                             result = "The amino acid created by this codon is Leucine";
+
+
 
                             break;
 
+
+
                         case 'A':
+
                             Console.WriteLine("The options based off of the codons second letter are: ");
+
                             Console.WriteLine("Glutamine");
+
                             Console.WriteLine("Histidine");
+
                             Console.WriteLine("Press Enter to Continue");
+
                             Console.ReadLine();
+
                             switch (BP3)
+
+
 
                             {
 
+
+
                                 case 'G':
+
                                     Console.Clear();
+
                                     result = "The amino acid added by this codon is Glutamine.";
 
+
+
                                     break;
+
+
 
                                 case 'A':
+
                                     Console.Clear();
+
                                     result = "The amino acid added by this codon is Glutamine.";
 
+
+
                                     break;
+
+
 
                                 case 'C':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Histidine.";
 
+
+
                                     break;
+
+
 
                                 case 'U':
+
                                     Console.Clear();
+
                                     result = "The amino acid created by this codon is Histidine.";
 
+
+
                                     break;
+
+
 
                             }
 
+
+
                             break;
+
+
 
                         case 'C':
+
                             Console.Clear();
+
                             result = "the amino acid added by this codon is Proline.";
 
+
+
                             break;
+
+
 
                         default:
 
+
+
                             result = "Invalid response.";
+
+
 
                             break;
 
+
+
                     }
 
+
+
                     break;
+
+
 
                 //sets the default result to Invalid Response
 
+
+
                 default:
-
                     result = "Invalid response.";
-
                     break;
-
             }
+
+
+
+
 
 
 
             //Tells the user what the codon is and closes when they click any key.
 
+
+
             Console.WriteLine(result);
+
+
 
             Console.WriteLine("Press any key to exit");
 
+
+
             Console.ReadLine();
-                            }
-                            break;
-                        case 'C':
-                            result = "the amino acid added by this codon is Proline.";
-                            break;
-                        default:
-                            result = "Invalid response.";
-                            break;
-                    }
-                    break;
-                    //sets the default result to Invalid Response
-                default:
-                    result = "Invalid response.";
-                    break;
-            }
-            
-            //Tells the user what the codon is and closes when they click any key.
-            Console.WriteLine(result);
-            Console.WriteLine("Press any key to exit");
-            Console.ReadLine();
+
+        }
+
+    }
+}
+
+
+
+
             
